@@ -23,11 +23,12 @@ public class LoginServlet extends HttpServlet
 		String name = req.getParameter("name");
 		String password = req.getParameter("password");
 
-		if (password.equals("pony123"))
+		if (password.equals("pony123") && name.equals("pony"))
 		{
 			out.print("Welcome " + name);
 			HttpSession session = req.getSession();
 			session.setAttribute("name", name);
+
 		} else
 			out.println("Bad username or password ! Permission denied");
 		req.getRequestDispatcher("login.html");

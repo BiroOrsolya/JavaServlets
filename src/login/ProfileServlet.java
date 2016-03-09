@@ -18,7 +18,7 @@ public class ProfileServlet extends HttpServlet
 
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
-		req.getRequestDispatcher("link.html").include(req, resp);
+		req.getRequestDispatcher("profile.html").include(req, resp);
 
 		HttpSession session = req.getSession(false);
 		if (session != null)

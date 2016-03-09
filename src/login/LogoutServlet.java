@@ -19,7 +19,7 @@ public class LogoutServlet extends HttpServlet
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 
-		req.getRequestDispatcher("link.html").include(req, resp);
+		req.getRequestDispatcher("logout.html").include(req, resp);
 
 		HttpSession session = req.getSession();
 		session.invalidate();
